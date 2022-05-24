@@ -8,11 +8,13 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float speed = 5;
     private Vector3 Move;
     bool Dash;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class PlayerControl : MonoBehaviour
 
         Move = new Vector3(moveX, 0).normalized;
 
+        Animate();
+
         /*if (Input.GetKeyDown(KeyCode.Space))
         {
             Dash = true;
@@ -48,6 +52,27 @@ public class PlayerControl : MonoBehaviour
             float DashAmount = 3f;
             rigidbody.MovePosition(transform.position + Move * DashAmount);
             Dash = false;
+        }
+    }
+
+    void Animate()
+    {
+        if (Input.GetKey("a"))
+        {
+            animator.SetBool("RunToL", true);
+        }
+        if (!Input.GetKey("a"))
+        {
+            animator.SetBool("RunToL", false);
+        }
+
+        if (Input.GetKey("d"))
+        {
+            animator.SetBool("RunToR", true);
+        }
+        if (!Input.GetKey("d"))
+        {
+            animator.SetBool("RunToR", false);
         }
     }
 }

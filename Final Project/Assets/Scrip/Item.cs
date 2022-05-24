@@ -62,16 +62,12 @@ public class Item : MonoBehaviour
     public void Dashss()
     {
         Dashs.enabled = true;
-        ItemDash.enabled = false;
-        ItemDashColl.enabled = false;
         BaseControl.enabled = false;
     }
 
     public void Count()
     {
-        ItemShield.enabled = false;
         Shield.enabled = true;
         ShieldColl.enabled = true;
-        ItemShieldColl.enabled = false;
     }
 }

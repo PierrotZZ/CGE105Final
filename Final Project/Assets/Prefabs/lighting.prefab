@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 3
   maxSpeed: 6
+  Boss: {fileID: 1043204722526238982, guid: 7df4e21ee4bc76e45bb3fb2ea67fe635, type: 3}
+  Enemyfall: {fileID: 8097671520410976224}
 --- !u!70 &7940211537014379128
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

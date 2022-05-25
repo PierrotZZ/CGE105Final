@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] float minSpeed;
     [SerializeField] float maxSpeed;
     float speed;
+
+    [SerializeField]  private GameObject Boss;
+    public GameObject Enemyfall;
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class Enemy : MonoBehaviour
         if (collisionInfo.collider.tag == "Ground")
         {
             Destroy(gameObject);
+            Instantiate(Boss, transform.position = new Vector3(Enemyfall.transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
         if (collisionInfo.collider.tag == "Player")
         {

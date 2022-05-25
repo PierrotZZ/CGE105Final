@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyItem : MonoBehaviour{
+public class DestroyItem : MonoBehaviour
+{
+    [SerializeField] float minSpeed;
+    [SerializeField] float maxSpeed;
+    float speed;
+
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         if (collisionInfo.collider.tag == "Player")

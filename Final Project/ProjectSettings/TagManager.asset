@@ -8,6 +8,8 @@ TagManager:
   - Dash
   - 'umbrella '
   - rain
+  - Ground
+  - Umbrella
   layers:
   - Default
   - TransparentFX

@@ -19,20 +19,21 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3 (0,-1,0)*speed*Time.deltaTime);
-
-        if(transform.position.y < -10)
-        {
-            //Destroy(gameObject);//
-        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collisionInfo)
+    void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if (collisionInfo.collider.tag == "umbrella")
+        if (collisionInfo.collider.tag == "Umbrella")
         {
-            Debug.Log("PUSSY");
+            Destroy(gameObject);
         }
-
-        
+        if (collisionInfo.collider.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+        if (collisionInfo.collider.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

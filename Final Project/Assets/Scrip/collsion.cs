@@ -29,9 +29,12 @@ public class collsion : MonoBehaviour
         healthbar( ref takeinspeed, finalscoreString);
     
     }
-    private void OnCollisionEnter2D()
+    private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        health = health - 1;
+        if (collisionInfo.collider.tag == "rain")
+        {
+            health = health - 1;
+        }
     }
 
    public void healthbar( ref float speed,string currentTimetext)

@@ -14,6 +14,10 @@ public class DestroyItem : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collisionInfo.collider.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update

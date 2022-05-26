@@ -19,6 +19,11 @@ public class BGM : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "BGM")
         {
+            SoundManager.Playsound("Rain");
+            Destroy(gameObject);
+        }
+        if (collisionInfo.collider.tag == "Mainmenu")
+        {
             SoundManager.Playsound("BG_song");
             Destroy(gameObject);
         }

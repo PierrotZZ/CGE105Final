@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Umbrella
   - BGM
+  - Mainmenu
   layers:
   - Default
   - TransparentFX

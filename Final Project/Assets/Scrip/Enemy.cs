@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
         }
         if (collisionInfo.collider.tag == "Player")
         {
-            SoundManager.Playsound("Yoshisound");
+            SoundManager.Playsound("Ouch");
             Destroy(gameObject);
            
             Instantiate(Boss, transform.position = new Vector3(Enemyfall.transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);

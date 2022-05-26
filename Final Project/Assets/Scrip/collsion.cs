@@ -34,6 +34,10 @@ public class collsion : MonoBehaviour
         if (collisionInfo.collider.tag == "rain")
         {
             health = health - 1;
+            if (health <= 0)
+            {
+                health = 0;
+            }
         }
     }
 

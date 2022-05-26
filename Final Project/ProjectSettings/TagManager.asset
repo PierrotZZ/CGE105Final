@@ -10,6 +10,7 @@ TagManager:
   - rain
   - Ground
   - Umbrella
+  - BGM
   layers:
   - Default
   - TransparentFX

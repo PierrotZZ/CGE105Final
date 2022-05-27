@@ -12,6 +12,8 @@ public class Item : MonoBehaviour
     public CircleCollider2D ItemDashColl;
     public PlayerControl BaseControl;
 
+    public GameObject effect;
+
     public float LimitItem;
 
     private void OnCollisionEnter2D(Collision2D collisionInfo)
@@ -20,12 +22,14 @@ public class Item : MonoBehaviour
         {
             LimitItem = 1;
             Dashss();
+            effect.SetActive(true);
         }
 
         if (collisionInfo.collider.tag == "Item")
         {
             LimitItem = 1;
             Count();
+            effect.SetActive(true);
         }
     }
 
@@ -53,6 +57,7 @@ public class Item : MonoBehaviour
                 ShieldColl.enabled = false;
                 Dashs.enabled = false;
                 BaseControl.enabled = true;
+                effect.SetActive(false);
             }
         }
     }

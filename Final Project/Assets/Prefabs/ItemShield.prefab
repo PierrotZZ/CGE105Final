@@ -136,3 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 3
   maxSpeed: 6
+  effectted: {fileID: 6116068971377413758, guid: 1b2021ae1f5d7ea42a4bc28b43928c6b, type: 3}

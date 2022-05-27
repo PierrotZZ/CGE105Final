@@ -37,6 +37,8 @@ public class PlayerDash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Dash = true;
+
+            SoundManager.Playsound("Dash");
         }
 
         Animate();

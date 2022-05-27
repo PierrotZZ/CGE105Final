@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip WaterDropSound, RainSound , DoruSound, BGMSong, OuchSound;
+    public static AudioClip WaterDropSound, RainSound , DoruSound, BGMSong, OuchSound , DashSound;
     static AudioSource AudioSrc;
 
 
@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
         DoruSound = Resources.Load<AudioClip>("Yoshisound");
         BGMSong = Resources.Load<AudioClip>("BG_song");
         OuchSound = Resources.Load<AudioClip>("Ouch");
+        DashSound = Resources.Load<AudioClip>("Dash");
 
         AudioSrc = GetComponent<AudioSource>();
     }
@@ -43,6 +44,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "Ouch":
                 AudioSrc.PlayOneShot(OuchSound);
+                break;
+            case "Dash":
+                AudioSrc.PlayOneShot(DashSound);
                 break;
 
         }

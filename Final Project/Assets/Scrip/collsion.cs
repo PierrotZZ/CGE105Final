@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class collsion : MonoBehaviour
 {
     public Text healthUI;
-    public Text gameoverUI;
+    public GameObject gameoverUI;
     [SerializeField] int health;
     string healthString;
     public Button gameover;
@@ -13,15 +13,19 @@ public class collsion : MonoBehaviour
     public Text finalscore;
     string finalscoreString;
     public Button quitbutton;
-   
+    public GameObject Woods;
+    public PlayerControl BaseControl;
 
-   
+
+
+
     private void Start()
     {
         gameover.gameObject.SetActive(false);   
         gameoverUI.gameObject.SetActive(false);
         finalscore.gameObject.SetActive(false);
         quitbutton.gameObject.SetActive(false);
+        Woods.gameObject.SetActive(false);
 
     }
     private void Update()
@@ -54,6 +58,8 @@ public class collsion : MonoBehaviour
             gameoverUI.gameObject.SetActive(true);
             finalscore.gameObject.SetActive(true);
             quitbutton.gameObject.SetActive(true);
+            Woods.gameObject.SetActive(true);
+            BaseControl.enabled = false;
         }
     }
 
